@@ -1,3 +1,5 @@
+import {createStore, combineReducers} from 'redux';
+
 export function count(state=0, action) {
   switch (action.type) {
     case 'inc':
@@ -6,3 +8,9 @@ export function count(state=0, action) {
       return state;
   }
 }
+
+const rootReducer = combineReducers({
+  count
+});
+
+export default rootReducer;

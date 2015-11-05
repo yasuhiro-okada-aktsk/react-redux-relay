@@ -1,14 +1,13 @@
 import App from './components/App';
 import AppHomeRoute from './routes/AppHomeRoute';
-import {createStore, combineReducers} from 'redux';
+import {createStore} from 'redux';
 import {Provider} from './redux-compat';
-import * as reducers from './reducers';
+import configureStore from './store/configureStore';
 
-const redux = createStore(combineReducers(reducers));
-
+const store = configureStore();
 
 React.render(
-  <Provider store={redux}>
+  <Provider store={store}>
     {() => (
       <Relay.RootContainer
         Component={App}
