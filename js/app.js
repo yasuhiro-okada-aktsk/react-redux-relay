@@ -2,9 +2,9 @@ import App from './components/App';
 import AppHomeRoute from './routes/AppHomeRoute';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from './redux-compat';
-import * as store from './store';
+import * as reducers from './reducers';
 
-const redux = createStore(combineReducers(store));
+const redux = createStore(combineReducers(reducers));
 
 
 React.render(
